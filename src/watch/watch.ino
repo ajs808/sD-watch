@@ -96,6 +96,10 @@ void setup()   {
   myIMU.begin();
 }
 
+//TODO: Add images/icons
+//TODO: Remove double input (or make easier to use)
+//TODO: Create button click(), hold(length), etc.
+//TODO: Try double click input
 void loop()
 {
   //count steps
@@ -116,6 +120,7 @@ void loop()
     }
   }
 
+  //TODO: Change navigation, remove backwards traversal
   //navigate screen backwards
   if(!digitalRead(7) && digitalRead(12))
   {
@@ -127,6 +132,7 @@ void loop()
     }
   }
 
+  //TODO: Add more function (date, month, etc.)
   //clock screen
   if(screenNumber == 0)
   {
@@ -149,6 +155,7 @@ void loop()
     display.display();
   }
 
+  //TODO: Fix spacing
   //pedometer screen
   if(screenNumber == 1)
   {
@@ -161,6 +168,7 @@ void loop()
     display.display();
   }
 
+  //Get BPM data
   //graph screen
   if(screenNumber == 2)
   {
@@ -182,6 +190,7 @@ void loop()
     }
   }
 
+  //TODO: Remove auto-start
   //stopwatch screen
   if(screenNumber == 3)
   {
